@@ -1,0 +1,217 @@
+/* General CSS Stuff Start */
+#mainBody {
+	margin-right: 300px;
+}
+
+body {
+	background-color: rgb(242, 242, 242);
+}
+/* General CSS Stuff End */
+
+/* Tool Bar CSS Start*/
+#toolBarHead {
+	font-size: 60px;
+	background-color: #ac1e31;
+	font-weight: bold;
+	text-align: center;
+}
+
+#toolBarOutline {
+	border-style: solid;
+	border-width: 5px;
+}
+
+.toolBar {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+.toolBarItem {
+	float: left;
+	border-right: 1px solid white;
+}
+
+.toolBarText {
+	display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.toolBarItem:hover {
+	background-color: rgb(77, 77, 77);
+}
+/* Tool Bar CSS End */
+
+/* Home Page Start */
+#mainPagePara {
+	font-size: 25px;
+	line-height: 150%;
+}
+
+#mainPageContent {
+	position: relative;
+}
+
+#griffinImage {
+	position: relative;
+	float: right;
+	width: 200px;
+	margin: 10px;
+	margin-top: 0px;
+}
+
+#centerTextMain {
+	text-align: center;
+}
+/* Home Page End */
+
+/* Submitted Item CSS Start */
+.itemListImage {
+	float: left;
+	width: 50px;
+	padding: 10px 10px;
+	border: 1px solid rgb(217, 217, 217);
+	background-color: white;
+}
+
+.itemListTitle {
+	float: left;
+	padding: 10px 10px;
+	font-weight: bold;
+}
+
+.itemListDesc {
+	float: left;
+	padding: 10px 10px;
+	font-style: italic;
+}
+
+.itemListPrice {
+	float: left;
+	padding: 10px 10px;
+	color: rgb(0, 133, 44);
+}
+
+.itemListInfo {
+	display: block;
+	float: left;
+	text-align: center;
+	padding: 10px 10px;
+	width: 80px;
+	height: 47px;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 100%;
+	color: black;
+	text-decoration: none;
+	background-color: #ac1e31;
+	border: 2px outset white;
+}
+
+.itemListInfo:visited {
+	background-color: #ac1e31;
+	font-weight: normal;
+}
+
+.itemListMainList {
+	list-style-type: none;
+	margin-left: -40px;
+}
+
+.itemListInternalList {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 3px solid black;
+    background-color: rgb(217, 217, 217);
+    margin-bottom: 5px;
+}
+/* Submitted Item CSS End */
+
+/* Form Stuff Start */
+.formSmallText {
+	font-size: 0.75em;
+}
+
+.formInputDesc {
+	width: 550px;
+	height: 150px;
+}
+
+#formSubmitButton {
+	width: 100px;
+	height: 50px;
+	font-size: 1.5em;
+	background-color: rgb(217, 217, 217);
+}
+
+.error {
+    color: red;
+}
+
+#searchForm {
+	float: right;
+}
+/* Form Stuff End */
+
+/* Item Pages Start */
+.itemPageImageSize {
+	width: 300px;
+}
+
+.itemPageBackground {
+	float: left;
+	background-color: rgb(217, 217, 217);
+	border: 3px solid black;
+	text-align: center;
+	margin-right: 5px;
+}
+
+
+#itemPageBackgroundRight {
+	/*margin-left: 5px;*/
+	width: 400px;
+}
+
+
+.itemPageTitleWrap {
+	border-width: 3px;
+	border-bottom-style: solid;
+}
+
+#itemPageTitleFormat {
+	word-wrap: hidden;
+}
+
+.itemPageDescWrap {
+	width: 500px;
+	word-wrap: normal;
+	border-width: 3px;
+	border-top-style: solid;
+	margin-top: 10px;
+}
+
+#itemPageListingPriceFormat {
+	color: rgb(0, 133, 44);
+}
+
+#itemPageContactButtonFormat {
+	width: 150px;
+	height: 50px;
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+/* Item Pages End*/
+
+.listingHeader {
+	float: left;
+	padding: 0;
+	font-size: 0.8 em;
+}
