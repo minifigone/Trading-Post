@@ -19,6 +19,22 @@ class dbConnector{
         }
     }
 
+    private function query($query){
+        $ret = array();
+
+        if(is_object($result = $this->connection->query($query))){
+            while($row = $result->fetch_assoc()){
+                $ret[] = $row;
+            }
+
+            $result->free();
+        }
+
+        return $ret;
+    }
+
+    
+
 }
 
 ?>
