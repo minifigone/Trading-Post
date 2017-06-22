@@ -15,7 +15,6 @@
 		<li class="toolBarItem"> <a href="Submit.php" class="toolBarText">Submit</a>
 		<li class="toolBarItem"> <a href="Disclaimer.html" class="toolBarText">Disclaimer</a>
 	</ul>
-	<!-- <img src="Griffin.png" id="griffinImage"> -->
 	<div id="mainPageContent">
 		<div class="itemPageBackground">
 		<h1>Are you trying to sell your stuff at [INSERT PLACE HERE]?</h1>
