@@ -17,7 +17,7 @@
 	</ul>
 	<div id="mainPageContent">
 		<div class="itemPageBackground">
-		<h1>Are you trying to sell your stuff at [INSERT PLACE HERE]?</h1>
+		<h1>Are you trying to sell your stuff at [CLEVER NAME]?</h1>
 		<p id="mainPagePara">Then you've come to the right place!<br><br>Here at <i>Trading Post</i> we help you connect with others and allows all 
 			to connect on a convenient network. Here you can post your items, their prices, and even their pictures. It also makes it easy for others 
 			to contact you if they're interested.<br><br><i>The best part?</i> The service is entirely <b>free</b> and leaves the physical transfer of 
