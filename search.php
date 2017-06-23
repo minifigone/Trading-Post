@@ -9,13 +9,9 @@
 </head>
 <body>
 	<!-- Tool Bar on Every Page -->
-	<ul class="toolBar">
-		<li id="toolBarHead">Trading Hub
-		<li class="toolBarItem"> <a href="index.php" class="toolBarText">Home</a>
-		<li class="toolBarItem"> <a href="Browse.php" class="toolBarText">Browse</a>
-		<li class="toolBarItem"> <a href="Submit.php" class="toolBarText">Submit</a>
-		<li class="toolBarItem"> <a href="Disclaimer.html" class="toolBarText">Disclaimer</a>
-	</ul>
+	<?php
+	include("toolBar.php"); 
+	?>
 	
 	<?php
 		if (isset($_GET['searchTerm'])) {

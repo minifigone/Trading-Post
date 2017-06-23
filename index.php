@@ -2,26 +2,31 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Trading Hub - Home</title>
+	<title>The Trading Post - Home</title>
 	<link rel="icon" type="image/png" href="Favicon.png">
 	<link rel="stylesheet" href="MainStyle.css">
+	<link rel="stylesheet" href="Master Files/colorScheme.css">
 </head>
 <body>
 	<!-- Tool Bar on Every Page -->
-	<ul class="toolBar">
-		<li id="toolBarHead">Trading Hub
-		<li class="toolBarItem"> <a href="index.php" class="toolBarText">Home</a>
-		<li class="toolBarItem"> <a href="Browse.php" class="toolBarText">Browse</a>
-		<li class="toolBarItem"> <a href="Submit.php" class="toolBarText">Submit</a>
-		<li class="toolBarItem"> <a href="Disclaimer.html" class="toolBarText">Disclaimer</a>
-	</ul>
+	<?php
+	include("toolBar.php"); 
+	?>
 	<div id="mainPageContent">
 		<div class="itemPageBackground">
-		<h1>Are you trying to sell your stuff at [CLEVER NAME]?</h1>
-		<p id="mainPagePara">Then you've come to the right place!<br><br>Here at <i>Trading Post</i> we help you connect with others and allows all 
-			to connect on a convenient network. Here you can post your items, their prices, and even their pictures. It also makes it easy for others 
-			to contact you if they're interested.<br><br><i>The best part?</i> The service is entirely <b>free</b> and leaves the physical transfer of 
-			assets up to user discretion.</p>
+		<h1>Welcome back to The Trading Post!</h1>
+		<p id="mainPagePara">
+		Here you can feel free to sell whatever you wish, for whatever the price! We exist off the internet and completely disconnected with
+		the outside world all for your security of course; and ours for that matter. Be sure to check out the recently listed items below.<br><br>
+		
+		If you're new here, then this is how you can get started using The Trading Post:<br>
+		1. You can create an account by clicking the button above. This is your key to the shop!<br>
+		2. Your account can then be used at any Trading Post Hotspot. But, remember, you have to be connected to view log-in and view this site!<br>
+		3. Once you've made an account, you can list items for sale or interact with sellers at any time!<br>
+		4.If you're interested in a product, you can send the seller a personal message all within The Trading Post. This maximizes security and lets you ensure
+			your buyer or seller is for real!<br>
+		5. Once you've made an agreement, just meet up, exchange your goods, and be on your way. Easy as pie!
+		</p>
 		</div>
 	</div>
 	<div>

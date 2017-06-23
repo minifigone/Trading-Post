@@ -11,9 +11,22 @@ body {
 /* Tool Bar CSS Start*/
 #toolBarHead {
 	font-size: 60px;
-	background-color: #ac1e31;
+	background-color: rgba( 86, 69,115,1);
 	font-weight: bold;
 	text-align: center;
+}
+
+#toolBarHead_text {
+	color: rgba(168,159, 94,1);
+}
+
+#toolBarHead_shadow {
+	color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
 }
 
 #toolBarOutline {
@@ -31,12 +44,12 @@ body {
 
 .toolBarItem {
 	float: left;
-	border-right: 1px solid white;
+	border-right: 1px solid rgba(168,159, 94,1);
 }
 
 .toolBarText {
 	display: block;
-    color: white;
+    color: rgba(168,159, 94,1);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
