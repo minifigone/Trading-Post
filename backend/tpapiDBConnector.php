@@ -102,9 +102,53 @@ class dbConnector{
         ";
         $this->query($sqlQuery);
     }
-    //TODO: Delete Listing
-    //TODO: Get All Listings
-    //TODO: Get All Listings By User
+    
+    /**
+     * Deletes a listing from the listing based on a given idlisting
+     */
+    public function deleteListing($idListing){
+        $sqlQuery = "
+            DELETE FROM listing
+            WHERE idlisting = '$idListing'
+        ";
+        $this->query($sqlQuery);
+    }
+    /*
+     * Selects all listings from the listing table and returns them ordered by most recently posted
+     */
+    public function selectAllListingsByMostRecent(){
+        $sqlQuery = "
+            SELECT *
+            FROM listing
+            ORDER BY idlisting DESC
+        ";
+        return $this->query($sqlQuery);
+    }
+    /*
+     * Selects the three most recent listings from the listing table and returns them ordered by most recently posted
+     */
+    public function select3ListingsByMostRecent(){
+        $sqlQuery = "
+            SELECT *
+            FROM listing
+            ORDER BY idlisting DESC
+            LIMIT 3
+        ";
+        return $this->query($sqlQuery);
+    }
+    /*
+     * Selects all listings from the listing table based on a given userid
+     * Return is ordered by most recently posted
+     */
+    public function selectAllListingsByUser($userId){
+        $sqlQuery = "
+            SELECT *
+            FROM listing
+            WHERE iduser = '$idUser'
+            ORDER BY idlisting DESC
+        ";
+        return $this->query($sqlQuery);
+    }
     //TODO: Search Listings
     //TODO: Send Mail
     //TODO: Get Mail For User
