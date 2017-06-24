@@ -45,6 +45,7 @@ class dbConnector{
         ";
         $this->query($sqlQuery);
     }
+
     /**
      * Inserts a new hashed password for a given iduser into the user table of the database
      */
@@ -58,6 +59,7 @@ class dbConnector{
         ";
         $this->query($sqlQuery);
     }
+    
     /**
      * Deletes listings for a given iduser from the listing table
      * Deletes sent mail for a given iduser from the mail table
@@ -86,7 +88,20 @@ class dbConnector{
         ";
         $this->query($sqlQuery);
     }
-    //TODO: Create Listing
+
+    /**
+     * Inserts into the listing table a new listing based on given:
+     *  iduser, title, description, price, and barter
+     */
+    public function insertNewListing($idUser, $title, $description, $price, $barter){
+        $sqlQuery = "
+            INSERT INTO listing
+                (iduser, title, description, price, barter)
+            VALUES
+                ('$idUser', '$title', '$description', '$price', '$barter')
+        ";
+        $this->query($sqlQuery);
+    }
     //TODO: Delete Listing
     //TODO: Get All Listings
     //TODO: Get All Listings By User
