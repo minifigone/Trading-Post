@@ -47,6 +47,11 @@ body {
 	border-right: 1px solid rgba(168,159, 94,1);
 }
 
+.toolBarItem_Right {
+	float: right;
+	border-left: 1px solid rgba(168,159, 94,1);
+}
+
 .toolBarText {
 	display: block;
     color: rgba(168,159, 94,1);
@@ -56,6 +61,10 @@ body {
 }
 
 .toolBarItem:hover {
+	background-color: rgb(77, 77, 77);
+}
+
+.toolBarItem_Right:hover {
 	background-color: rgb(77, 77, 77);
 }
 /* Tool Bar CSS End */
@@ -184,6 +193,7 @@ body {
 	border: 3px solid black;
 	text-align: center;
 	margin-right: 5px;
+	margin-top: 3px;
 }
 
 
@@ -221,10 +231,75 @@ body {
 	font-weight: bold;
 	margin-bottom: 10px;
 }
-/* Item Pages End*/
+/* Item Pages End */
 
+/* Account Page Start */
+.accountPageBackground {
+	float: left;
+	background-color: rgb(217, 217, 217);
+	border: 3px solid black;
+	text-align: center;
+	margin-right: 5px;
+	margin-top: 3px;
+}
+
+
+#accountPageBackgroundRight {
+	/*margin-left: 5px;*/
+	width: 400px;
+}
+
+
+.accountPageTitleWrap {
+	border-width: 3px;
+	border-bottom-style: solid;
+	margin-right: 10px;
+	margin-left: 10px;
+	color: black;
+}
+
+#accountPageTitleFormat {
+	word-wrap: hidden;
+	color: rgba( 86, 69,115,1);
+}
+
+.accountPageDescWrap {
+	width: 500px;
+	word-wrap: normal;
+	border-width: 3px;
+	border-top-style: solid;
+	margin-top: 10px;
+}
+
+#accountPageWelcome {
+	text-align: left;
+	margin-left: 10px;
+}
+
+.accountPageListButton {
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+
+.accountPageHighlightNum {
+	color: rgba(168,159, 94,1);
+	font-weight: bold;
+}
+
+.accountPageButtonList {
+	margin: 0;
+    padding: 0;
+}
+/* Account Page End */
+
+/* Other Start */
 .listingHeader {
 	float: left;
 	padding: 0;
 	font-size: 0.8 em;
 }
+
+.endSpacerGeneric {
+	margin-bottom: 3px;
+}
+/* Other End */

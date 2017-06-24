@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Trading Hub - Disclaimer</title>
+	<title>The Trading Post - Disclaimer</title>
 	<link rel="icon" type="image/png" href="Favicon.png">
 	<link rel="stylesheet" href="MainStyle.css">
 </head>

@@ -78,6 +78,8 @@
 	</div>
 </body>
 <script>
-	console.log("Built by Tom Castle. Promoted by Brody Childs.");
+	console.log("What are you doing in here little bird?");
+	console.log("Your infraction has been logged.");
+	//TODO: Log IPs that open the Inspector or equivilant.
 </script>
 </html>
