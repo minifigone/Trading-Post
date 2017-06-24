@@ -33,9 +33,59 @@ class dbConnector{
         return $ret;
     }
 
-    //TODO: Create User
-    //TODO: Change User Password
-    //TODO: Delete User
+    /**
+     * Inserts username and hashed password into the user table of the database
+     */
+    public function insertNewUser($name, $password){
+        $sqlQuery = "
+            INSERT INTO user
+                (username, password)
+            VALUES
+                ('$username', '$password')
+        ";
+        $this->query($sqlQuery);
+    }
+    /**
+     * Inserts a new hashed password for a given iduser into the user table of the database
+     */
+    public function insertNewPassword($idUser, $newPassword){
+        $sqlQuery = "
+            INSERT INTO user
+                (password)
+            VALUES
+                ('$newPassword')
+            WHERE iduser = '$idUser'
+        ";
+        $this->query($sqlQuery);
+    }
+    /**
+     * Deletes listings for a given iduser from the listing table
+     * Deletes sent mail for a given iduser from the mail table
+     * Deletes received mail for a given iduser from the mail table
+     * Deletes a given iduser from the user table
+     */
+    public function deleteUserAndListingsAndMail($idUser){
+        $sqlQuery = "
+            DELETE FROM listings
+            WHERE iduser = '$idUser'
+        ";
+        $this->query($sqlQuery);
+        $sqlQuery = "
+            DELETE FROM mail
+            WHERE idfrom = '$idUser'
+        ";
+        $this->query($sqlQuery);
+        $sqlQuery = "
+            DELETE FROM mail
+            WHERE idto = '$isUser'        
+        ";
+        $this->query($sqlQuery);
+        $sqlQuery = "
+            DELETE FROM user
+            WHERE iduser = '$idUser'
+        ";
+        $this->query($sqlQuery);
+    }
     //TODO: Create Listing
     //TODO: Delete Listing
     //TODO: Get All Listings
