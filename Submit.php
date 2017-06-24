@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Trading Hub - Submit</title>
+	<title>The Trading Post - Submit</title>
 	<link rel="icon" type="image/png" href="Favicon.png">
 	<link rel="stylesheet" href="MainStyle.css">
 </head>
@@ -78,7 +78,7 @@
 			<input type="file" name="itemImage3" id="itemImage3">
 		</fieldset>
 		<br>
-		By submitting an item to this network, you are agreeing to our <a href="Disclaimer.html">Terms and Conditions</a>.
+		By submitting an item to this network, you are agreeing to our <a href="Disclaimer.php">Terms and Conditions</a>.
 		<br>
 		<input type="submit" value="Submit" name="formSubmit" id="formSubmitButton">
 	</form>
