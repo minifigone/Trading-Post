@@ -33,7 +33,18 @@ class dbConnector{
         return $ret;
     }
 
-    
+    //TODO: Create User
+    //TODO: Change User Password
+    //TODO: Delete User
+    //TODO: Create Listing
+    //TODO: Delete Listing
+    //TODO: Get All Listings
+    //TODO: Get All Listings By User
+    //TODO: Search Listings
+    //TODO: Send Mail
+    //TODO: Get Mail For User
+    //TODO: Mark Mail Read
+    //TODO: Get User Name For User Id
 
 }
 
