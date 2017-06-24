@@ -12,15 +12,7 @@
 	<?php
 	include("toolBar.php"); 
 	?>
-	<ul class="toolBar">
-	<li id="toolBarHead"><span id="toolBarHead_text">The Trading Post</span>
-	<li class="toolBarItem"> <a href="index.php" class="toolBarText">Home</a>
-	<li class="toolBarItem"> <a href="Browse.php" class="toolBarText">Browse</a>
-	<li class="toolBarItem"> <a href="Submit.php" class="toolBarText">Submit</a>
-	<li class="toolBarItem"> <a href="Disclaimer.php" class="toolBarText">Disclaimer</a>
-	<li class="toolBarItem_Right"> <a href="AccountPage.php" class="toolBarText">My Account</a>
-	</ul>
-	
+
 	<!-- Page Main -->		
 	<!-- Left Bar Start -->
 	<div class="accountPageBackground">
@@ -30,8 +22,8 @@
 		<p>You have <span class="accountPageHighlightNum">NUMBER</span> active products currently.</p>
 		<p>There are <span class="accountPageHighlightNum">NUMBER</span> messages in your Inbox.</p>
 		<p>You are connected to node <span class="accountPageHighlightNum">IP_ADDRESS</span>.</p>
-		<p>You are computer <span class="accountPageHighlightNum">IP_ADDRESS</span> on our network.</p>
-		<!-- PHP MODE GO: <p>You are computer <span class="accountPageHighlightNum"><?PHP echo $_SERVER['REMOTE_ADDR']; ?></span>.</p> -->
+		<!-- SHIT HTML MODE GO: <p>You are computer <span class="accountPageHighlightNum">IP_ADDRESS</span> on our network.</p> -->
+		<p>You are computer <span class="accountPageHighlightNum"><?PHP echo $_SERVER['REMOTE_ADDR']; ?></span>.</p>
 		
 		<br>
 		<!-- User Settings Block -->
@@ -49,15 +41,72 @@
 
 <!-- Right Bar Start -->
 	<div class="accountPageBackground" id="accountPageBackgroundRight">
-
-		<h4>Item Quantity: <?php echo $quantity; ?></h4>
-
-		<h4>Is the lister willing to to barter? <?php echo $barter; ?></h4>
+		<h1 id="accountPageTitleFormat" class="accountPageTitleWrap">Account Actions</h1>
+		<ul class="accountPageButtonList">
+			<li class="accountPageListButton"> <a href="#"><button type="button">Open Your Products</button></a> <!-- Opens search action with username as search param -->
+			<li class="accountPageListButton"> <button id="accountPageShowMessagesButton" type="button" onclick="showMessagesHTML()">Open Inbox</button> <!-- Opens the Inbox below button -->
+		</ul>
+	</div>
+	
+<!-- Messages Panel Start -->
+	<div class="accountPageBackground" id="accountPageBackgroundRight_Inbox">
+		<!-- Inbox -->
+		<h1 id="accountPageTitleFormat" class="accountPageTitleWrap">Inbox</h1>
+		<ul class="inboxListFormat"> <!-- Main list container -->
 		
-
+			<li><!-- Single Entry Start --> <!-- New Messages have OTHER_USER in BOLD text, Opened Messages have OTHER_USER in REGULAR text -->
+				<a href="#" id="inboxListLink">
+					<ul id="inboxListInternal">
+						<li id="inboxListInternalListItem"><p style="font-weight:bold;" id="inboxListItem_user" class="inboxListItem_Left">OTHER_USER</p>
+						<li id="inboxListInternalListItem"><p id="inboxListItem_text" class="inboxListItem_Right">TEXT_PREVIEW</p>
+						<!--<li id="inboxListInternalListItem"><p id="inboxListItem" class="inboxListItem_Left">TIME_STAMP</p>
+						<li id="inboxListInternalListItem"><p id="inboxListItem" class="inboxListItem_Right">IS_READ</p>-->
+					</ul>
+				</a>
+			</li><!-- Single Entry End -->
+			
+			<li><!-- Single Entry Start --> <!-- New Messages have OTHER_USER in BOLD text, Opened Messages have OTHER_USER in REGULAR text -->
+				<a href="#" id="inboxListLink">
+					<ul id="inboxListInternal">
+						<li id="inboxListInternalListItem"><p id="inboxListItem_user" class="inboxListItem_Left">OTHER_USER</p>
+						<li id="inboxListInternalListItem"><p id="inboxListItem_text" class="inboxListItem_Right">TEXT_PREVIEW</p>
+						<!--<li id="inboxListInternalListItem"><p id="inboxListItem" class="inboxListItem_Left">TIME_STAMP</p>
+						<li id="inboxListInternalListItem"><p id="inboxListItem" class="inboxListItem_Right">IS_READ</p>-->
+					</ul>
+				</a>
+			</li><!-- Single Entry End -->
+			
+		</ul>
+		
+		<!-- End -->
+		<p class="endSpacerGeneric"></p>
 	</div>
 	
 </body>
 <script>
+// Variables
+isMsgOpen = false;
+
+// Hide intially
+document.getElementById("accountPageBackgroundRight_Inbox").style.visibility = "hidden";
+
+// Guess what this does
+function showMessagesHTML() {
+	if (!isMsgOpen) {
+		// Flop
+		document.getElementById("accountPageShowMessagesButton").innerHTML = "Close Inbox";
+		isMsgOpen = true;
+		
+		// Show
+		document.getElementById("accountPageBackgroundRight_Inbox").style.visibility = "visible";
+	} else {
+		// Flop
+		document.getElementById("accountPageShowMessagesButton").innerHTML = "Open Inbox";
+		isMsgOpen = false;
+		
+		// Hide
+		document.getElementById("accountPageBackgroundRight_Inbox").style.visibility = "hidden";
+	}
+}
 </script>
 </html>

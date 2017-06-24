@@ -249,6 +249,10 @@ body {
 	width: 400px;
 }
 
+#accountPageBackgroundRight_Inbox {
+	/*margin-left: 5px;*/
+	width: 400px;
+}
 
 .accountPageTitleWrap {
 	border-width: 3px;
@@ -291,6 +295,59 @@ body {
     padding: 0;
 }
 /* Account Page End */
+
+/* Inbox Element Start */
+.inboxListFormat{
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+}
+
+#inboxListInternal {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 3px solid black;
+    background-color: rgba( 86, 69,115,1);
+    margin-bottom: 5px;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+#inboxListInternal:hover {
+	background-color: rgb(200, 200, 200);
+}
+
+.inboxListItem_Left {
+	color: rgb(239,239,239);
+	margin-left: 3px;
+	float: left;
+	clear: left;
+}
+
+.inboxListItem_Right {
+	color: rgb(239,239,239);
+	margin-right: 3px;
+	float: right;
+	clear: right;
+}
+
+#inboxListItem_user {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#inboxListItem_text {
+	margin-top: 8px;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+
+#inboxListInternalListItem {
+	margin: 0px;
+}
+/* Inbox Element End */
 
 /* Other Start */
 .listingHeader {
