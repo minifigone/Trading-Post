@@ -243,7 +243,6 @@ body {
 	margin-top: 3px;
 }
 
-
 #accountPageBackgroundRight {
 	/*margin-left: 5px;*/
 	width: 400px;
@@ -348,6 +347,71 @@ body {
 	margin: 0px;
 }
 /* Inbox Element End */
+
+/* Chat Page Start */
+.chatPageBackground {
+	float: left;
+	background-color: rgb(217, 217, 217);
+	border: 3px solid black;
+	text-align: center;
+	margin-right: 5px;
+	margin-top: 3px;
+}
+
+.chatPageContainer {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border: 1px solid black;
+}
+
+.chatPageMessageList {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.chatPageListItem {
+	margin-top: 5px;
+}
+
+.chatPageInboxHeader {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#chatPageMessageContainer {
+	margin-top: 5px;
+	max-width: 500px;
+	height: 70vh;
+	overflow-y: auto;
+}
+
+#chatPageMessageContainer_Sent {
+	background: rgba(168,159, 94,1);
+}
+
+#chatPageMessageContainer_Given {
+	background: rgb(200, 200, 200);
+}
+
+#chatPageNewMessageInput {
+	margin: 1px;
+	width: 430px;
+}
+
+#chatPageMessageUsername {
+	font-weight: bold;
+	margin-top: 3px;
+	margin-bottom: 0px;
+}
+
+#chatPageMessageText {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+/* Chat Page End */
 
 /* Other Start */
 .listingHeader {

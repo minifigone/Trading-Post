@@ -31,6 +31,9 @@
 			</fieldset>
 			<input type="submit" value="Submit" name="formSubmit" id="formSubmitButton"> <!-- CHANGE TO PHP ACTION PARAMS -->
 		</form>
+		
+		<!-- End -->
+		<p class="endSpacerGeneric"></p>
 	</div>
 <!-- Left Bar End -->
 	
