@@ -1,6 +1,6 @@
 <?php
 
-class dbConnector{
+class tpapiDBConnector{
 
     private static $_dbAddress = "127.0.0.1";
     private static $_dbUser = "client";
@@ -45,7 +45,6 @@ class dbConnector{
         ";
         $this->query($sqlQuery);
     }
-
     /**
      * Inserts a new hashed password for a given iduser into the user table of the database
      */
@@ -58,8 +57,7 @@ class dbConnector{
             WHERE iduser = '$idUser'
         ";
         $this->query($sqlQuery);
-    }
-    
+    }  
     /**
      * Deletes listings for a given iduser from the listing table
      * Deletes sent mail for a given iduser from the mail table
@@ -88,7 +86,6 @@ class dbConnector{
         ";
         $this->query($sqlQuery);
     }
-
     /**
      * Inserts into the listing table a new listing based on given:
      *  iduser, title, description, price, and barter
@@ -102,7 +99,6 @@ class dbConnector{
         ";
         $this->query($sqlQuery);
     }
-    
     /**
      * Deletes a listing from the listing based on a given idlisting
      */
