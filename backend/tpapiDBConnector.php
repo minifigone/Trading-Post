@@ -149,12 +149,84 @@ class dbConnector{
         ";
         return $this->query($sqlQuery);
     }
-    //TODO: Search Listings
-    //TODO: Send Mail
-    //TODO: Get Mail For User
-    //TODO: Mark Mail Read
-    //TODO: Get User Name For User Id
-
+    /*
+     * Selects all listings that match a given search term in title or description
+     * Return is ordered by most recently posted
+     */
+    public function selectSearchTerm($searchTerm){
+        $sqlQuery = "
+            SELECT *
+            FROM listing
+            WHERE title LIKE '%$searchTerm%'
+                OR description LIKE '%$searchTerm%'
+            ORDER BY idlisting DESC
+        ";
+        return $this->query($sqlQuery);
+    }
+    /*
+     * Inserts new mail message containing idusers for the sender and receiver, and the title and body of the message
+     */
+    public function insertNewMessage($to, $from, $title, $body){
+        $sqlQuery = "
+            INSERT INTO mail
+                (idfrom, idto, title, message, beenread)
+            VALUES
+                ($from, $to, '$title', '$body', 0)
+        ";
+        $this->query($sqlQuery);
+    }
+    /*
+     * Selects all mail sent to a given userid
+     */
+    public function selectAllMailToUser($idUser){
+        $sqlQuery = "
+            SELECT *
+            FROM mail
+            WHERE idto = '$idUser'
+            ORDER BY idmail DESC
+        ";
+        return $this->query($sqlQuery);
+    }
+    /*
+     * Changes the read status of a mail message from unread to read
+     */
+    public function markMailRead($idMail){
+        $sqlQuery = "
+            INSERT INTO mail
+                (beenread)
+            VALUES
+                (1)
+        ";
+        $this->query($sqlQuery);
+    }
+    /*
+     * Selects the username for a given iduser
+     */
+    public function selectUserNameForUserId($idUser){
+        $sqlQuery = "
+            SELECT username
+            FROM user
+            WHERE username = '$idUser'
+        ";
+        return $this->query($sqlQuery);
+    }
+    /*
+     * Selects all mail from a specific conversation (common to and from users)
+     */
+    public function selectMailForToUserAndFromUser($toUser, $fromUser){
+        $sqlQuery = "
+            SELECT *
+            FROM mail
+            WHERE 
+                (idto = '$toUser'
+                AND idfrom = '$fromUser')
+                OR
+                (idto = '$fromUser'
+                AND idfrom = '$toUser')
+            ORDER BY idmail DESC
+        ";
+        return $this->query($sqlQuery);
+    }
 }
 
 ?>
