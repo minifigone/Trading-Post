@@ -4,12 +4,12 @@ include_once 'tpapiDBConnector.php';
 
 class tpapiCreateNewUser extends tpapiDBConnector{
 
-    public function tpapiCreateNewUser($userName, $password){
-        parent::tpapiDBConnector();
+    public function __construct($userName, $password){
+        parent::__construct();
 
-        $password = hashPassword($password);
+        $password = $this->hashPassword($password);
 
-        createNewUser($userName, $password);
+        $this->createNewUser($userName, $password);
     }
 
     private function hashPassword($password){

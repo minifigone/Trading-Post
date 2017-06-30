@@ -2,15 +2,20 @@
 
 class tpapiDBConnector{
 
-    private static $_dbAddress = "127.0.0.1";
-    private static $_dbUser = "client";
-    private static $_dbPasskey = "clientinsert";
-    private static $_dbSchema = "items_site_data";
+    private $_dbAddress;
+    private $_dbUser;
+    private $_dbPasskey;
+    private $_dbSchema;
 
     private $_connection;
 
-    public function dbConnector(){
-        $this->_connection = mysqli_connect($this->_dbAddress, $this->_dbUser, $this->_dbPasskey, $this->_dbSchema);
+    public function __construct(){
+        $_dbAddress = "127.0.0.1:3306";
+        $_dbUser = "client";
+        $_dbPasskey = "clientinsert";
+        $_dbSchema = "items_site_data";
+
+        $this->_connection = new mysqli($_dbAddress, $_dbUser, $_dbPasskey, $_dbSchema);
 
         if(!$this->_connection){
             echo "Unable to connect to database" . PHP_EOL;
@@ -20,17 +25,20 @@ class tpapiDBConnector{
     }
 
     private function query($query){
+        /*
         $ret = array();
 
-        if(is_object($result = $this->connection->query($query))){
+        if(is_object($result = $this->_connection->query($query))){
             while($row = $result->fetch_assoc()){
                 $ret[] = $row;
             }
 
             $result->free();
-        }
+        }*/
 
-        return $ret;
+        return $this->_connection->query($query);
+
+        // return $ret;
     }
 
     /**
@@ -39,9 +47,9 @@ class tpapiDBConnector{
     public function insertNewUser($name, $password){
         $sqlQuery = "
             INSERT INTO user
-                (username, password)
+                (username, userpassword)
             VALUES
-                ('$username', '$password')
+                ('$name', '$password')
         ";
         $this->query($sqlQuery);
     }
