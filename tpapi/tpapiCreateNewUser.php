@@ -7,9 +7,16 @@ class tpapiCreateNewUser extends tpapiDBConnector{
     public function __construct($userName, $password){
         parent::__construct();
 
-        $password = $this->hashPassword($password);
+        if($this->checkIfUserNameAvailable($userName)){
+            $password = $this->hashPassword($password);
 
-        $this->createNewUser($userName, $password);
+            $this->createNewUser($userName, $password);
+
+            print "User successfully created";
+        }else{
+            print "Username already in use";
+        }
+        
     }
 
     private function hashPassword($password){

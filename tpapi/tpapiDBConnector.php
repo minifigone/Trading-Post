@@ -25,20 +25,7 @@ class tpapiDBConnector{
     }
 
     private function query($query){
-        /*
-        $ret = array();
-
-        if(is_object($result = $this->_connection->query($query))){
-            while($row = $result->fetch_assoc()){
-                $ret[] = $row;
-            }
-
-            $result->free();
-        }*/
-
         return $this->_connection->query($query);
-
-        // return $ret;
     }
 
     /**
@@ -52,6 +39,18 @@ class tpapiDBConnector{
                 ('$name', '$password')
         ";
         $this->query($sqlQuery);
+    }
+    /*
+     * Checks where a username is taking by attempting to select that username from the database
+     * Returns true if the username is available, false if it is taken
+     */
+    public function checkIfUserNameAvailable($username){
+        $sqlQuery = "
+            SELECT FROM user
+            WHERE username LIKE '$username'
+        ";
+        $ret = $this->query($sqlQuery);
+        return (mysqli_num_rows($ret) == 0 ? true : false);
     }
     /**
      * Inserts a new hashed password for a given iduser into the user table of the database
