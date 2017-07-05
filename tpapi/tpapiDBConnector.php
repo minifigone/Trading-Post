@@ -47,10 +47,10 @@ class tpapiDBConnector{
     public function checkIfUserNameAvailable($username){
         $sqlQuery = "
             SELECT FROM user
-            WHERE username LIKE '$username'
+            WHERE username = '$username'
         ";
         $ret = $this->query($sqlQuery);
-        return (mysqli_num_rows($ret) == 0 ? true : false);
+        return ($ret === FALSE ? true : false);
     }
     /**
      * Inserts a new hashed password for a given iduser into the user table of the database
