@@ -230,6 +230,17 @@ class tpapiDBConnector{
         ";
         return $this->query($sqlQuery);
     }
+    /*
+     * Selects information for a given username to be used to verify a login
+     */
+    public function getUserInfoForVerification($username){
+        $sqlQuery = "
+            SELECT *
+            FROM user
+            WHERE username='$username'
+        ";
+        return $this->query($sqlQuery);
+    }
 }
 
 ?>
