@@ -13,7 +13,12 @@
 	?>
 
 	<p id="mainPagePara">A complete document of our disclaimer is available directly below.<br>By using our website the user is agreeing to these terms.<br>If this is not satisfactory, please close the site.</p>
-
+	
+	<h3>Made with:</h3>
+	<img src="tpapi/tpapiLogo.png" alt="T-Papi Logo">
+	
+	<br><br>
+	
 	<!-- Dirty Text converted from .rtf using computer program -->
 	<P ALIGN=CENTER STYLE="margin-bottom: 0.14in"><FONT FACE="Verdana, sans-serif"><B>Trading Post Disclaimer</B></FONT></P>
 	<P LANG="en-GB" ALIGN=JUSTIFY STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0.11in; line-height: 107%">
