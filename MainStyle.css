@@ -293,6 +293,10 @@ body {
 	margin: 0;
     padding: 0;
 }
+
+#DnotLoggedInHTMLChunk {
+	margin-top: 0;
+}
 /* Account Page End */
 
 /* Inbox Element Start */

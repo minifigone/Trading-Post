@@ -22,11 +22,11 @@
 				<legend><b>Reset your password:</b></legend>
 				Old Password:<br>
 				<span class="formSmallText">Your current password.</span><br>
-				<input type="text" name="email" value="">
+				<input type="text" name="oldPassword" value="">
 				<span class="error">* <?php echo $emailErr;?></span><br><br> <!-- CHANGE ERROR PHP -->
 				New Password:<br>
-				<span class="formSmallText">The password you want to change. No character requirements.</span><br>
-				<input type="text" name="password" value="">
+				<span class="formSmallText">The password you want to change to. No character requirements.</span><br>
+				<input type="text" name="newPassword" value="">
 				<span class="error">* <?php echo $passowrdErr;?></span> <!-- CHANGE ERROR PHP -->
 			</fieldset>
 			<input type="submit" value="Submit" name="formSubmit" id="formSubmitButton"> <!-- CHANGE TO PHP ACTION PARAMS -->
