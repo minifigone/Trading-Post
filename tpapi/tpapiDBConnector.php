@@ -10,10 +10,18 @@ class tpapiDBConnector{
     private $_connection;
 
     public function __construct(){
+        /*
         $_dbAddress = "127.0.0.1:3306";
         $_dbUser = "client";
         $_dbPasskey = "clientinsert";
         $_dbSchema = "items_site_data";
+        */
+        include("tpapiGetServerInfo.php");
+
+        $_dbAddress = $_CFG_ADDRESS;
+        $_dbUser = $_CFG_USER;
+        $_dbPasskey =$_CFG_PASSKEY;
+        $_dbSchema = $_CFG_SCHEMA;
 
         $this->_connection = new mysqli($_dbAddress, $_dbUser, $_dbPasskey, $_dbSchema);
 

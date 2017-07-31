@@ -8,7 +8,16 @@
 	<?php
 	
 		//connect to mysql server
-		$db = mysqli_connect("127.0.0.1:3306", "client", "clientinsert", "items_site_data");
+		include("tpapi/tpapiGetServerInfo.php");
+
+		$_dbAddress = $_CFG_ADDRESS;
+		$_dbUser = $_CFG_USER;
+		$_dbPasskey =$_CFG_PASSKEY;
+		$_dbSchema = $_CFG_SCHEMA;
+
+		$db = mysqli_connect($_dbAddress, $_dbUser, $_dbPasskey, $_dbSchema);
+
+		//$db = mysqli_connect("127.0.0.1:3306", "client", "clientinsert", "items_site_data");
 		if(!$db) {
 			echo "Error connecting to database " . PHP_EOL;
 			//echo "Thing 1 " . mysqli_connect_errno() . PHP_EOL;

@@ -13,8 +13,12 @@ The Trading Post runtime is for creating a functional Ebay/Craigslist like store
 * Other stuff.
 
 # Getting Started with Your Server
-## Setting Up Your Server Unit
-TBD
+## Setting Up Your Server (On Raspberry Pi)
+This setup will make your Raspberry Pi be its own Server and Web Host.
+Essentially, this will allow your server to act on its own without another internet network.
+However, this does mean it can not be accessed unless you are within the Pi's WiFi range.
+1. Get a Raspberry Pi 3 (or and older model with a WiFi Antenna, probably)
+2. TBD
 
 ## Setting Up the Database
 1. Open phpMyAdmin
@@ -24,7 +28,9 @@ TBD
 5. Choose the file in "root/databse_configuration"
 6. Make sure character set is "UTF-8" and format is "SQL"
 7. Hit "Go" at the bottom
-8. You should be good to go
+8. In "root/tpapi" open "tpapiDBConnector.php"
+9. Change _dbAddress, _dbUser, and _dbPasskey to the correct values for your system
+..* _dbSchema should stay "items_site_data" as long as you followed these instructionss
 
 # Powered By
 ![T-Papi API Logo](https://github.com/Tsadow/Trading-Post/blob/master/tpapi/tpapiLogo.png "T-Papi API")
