@@ -28,9 +28,12 @@ However, this does mean it can not be accessed unless you are within the Pi's Wi
 5. Choose the file in "root/databse_configuration"
 6. Make sure character set is "UTF-8" and format is "SQL"
 7. Hit "Go" at the bottom
-8. In "root/tpapi" open "tpapiDBConnector.php"
-9. Change _dbAddress, _dbUser, and _dbPasskey to the correct values for your system
-..* _dbSchema should stay "items_site_data" as long as you followed these instructionss
+8. In "root/tpapi" open "serverInfo.cfg"
+9. Change the lines in the file to represent your server setup. The lines in order are:
+..* Address
+..* Client
+..* Client Passkey
+..* Schema Name (Database Name)
 
 # Powered By
 ![T-Papi API Logo](https://github.com/Tsadow/Trading-Post/blob/master/tpapi/tpapiLogo.png "T-Papi API")
