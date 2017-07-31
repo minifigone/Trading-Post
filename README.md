@@ -2,10 +2,7 @@
 The Trading Post runtime is for creating a functional Ebay/Craigslist like store front on whatever network you want.
 
 # Requirements
-* SQL Database
-* Sever that runs HTML and PHP
-* Balls
-* PHP7
+* PHP-7
 * MySQL 5.7
 * Apache 2.4
 
@@ -28,3 +25,7 @@ TBD
 6. Make sure character set is "UTF-8" and format is "SQL"
 7. Hit "Go" at the bottom
 8. You should be good to go
+
+# Powered By
+![T-Papi API Logo](https://github.com/Tsadow/Trading-Post/blob/master/tpapi/tpapiLogo.png "T-Papi API")
+"Come and get some."
