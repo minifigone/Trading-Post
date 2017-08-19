@@ -18,14 +18,19 @@ class tpapiDBConnector{
         */
         include("tpapiGetServerInfo.php");
 
-        $_dbAddress = $_CFG_ADDRESS;
-        $_dbUser = $_CFG_USER;
-        $_dbPasskey =$_CFG_PASSKEY;
-        $_dbSchema = $_CFG_SCHEMA;
+        $this->_dbAddress = $_CFG_ADDRESS;
+        $this->_dbUser = $_CFG_USER;
+        $this->_dbPasskey =$_CFG_PASSKEY;
+        $this->_dbSchema = $_CFG_SCHEMA;
 
-        $this->_connection = new mysqli($_dbAddress, $_dbUser, $_dbPasskey, $_dbSchema);
+        print $this->_dbAddress;
+        print $this->_dbPasskey;
+        print $this->_dbSchema;
+        print $this->_dbUser;
 
-        if(!$this->_connection){
+        $this->_connection = new mysqli($this->_dbAddress, $this->_dbUser, $this->_dbPasskey, $this->_dbSchema);
+
+        if($this->_connection->connect_errno > 0){
             echo "Unable to connect to database" . PHP_EOL;
             echo "Debug errno: " . mysqli_connect_errno() . PHP_EOL;
             echo "Debug error: " . mysqli_connect_error() . PHP_EOL;
