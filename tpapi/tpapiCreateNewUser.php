@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * TPAPI Trading Post API v0.1-a
+ *
+ * This class creates a new user record in the database using supplied information
+ * If a user with the supplied name already exists, it prints that the username is already in use
+ *
+ * Requires tpapiDBConnector.php to interact with the database
+ *
+ * @author Tsadow Tom Castle <tsadowcreative@gmail.com>
+ */
+
 include_once 'tpapiDBConnector.php';
 
 class tpapiCreateNewUser extends tpapiDBConnector{

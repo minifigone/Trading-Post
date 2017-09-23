@@ -1,5 +1,17 @@
 <?php
 
+/**
+ * TPAPI Trading Post API v0.1-a
+ * 
+ * This class handles communication with the MySQL database, including
+ * - Connecting to the database
+ * - Executing queries against the database and returning the data
+ *
+ * Currently, connection information is stored in this file; in future versions it will be stored in a seperate file accessed by this one
+ *
+ * @author Tsadow Tom Castle <tsadowcreative@gmail.com>
+ */
+
 class tpapiDBConnector{
 
     private $_dbAddress;
@@ -61,8 +73,6 @@ class tpapiDBConnector{
         ";
         $ret = $this->query($sqlQuery);
         return (mysqli_num_rows($ret) < 1);
-
-        // return ($ret === FALSE ? true : false);
     }
     /**
      * Inserts a new hashed password for a given iduser into the user table of the database
@@ -140,14 +150,14 @@ class tpapiDBConnector{
         return $this->query($sqlQuery);
     }
     /*
-     * Selects the three most recent listings from the listing table and returns them ordered by most recently posted
+     * Selects the most recent listings from the listing table up to a supplied number and returns them ordered by most recently posted
      */
-    public function select3ListingsByMostRecent(){
+    public function selectNumListingsByMostRecent($num){
         $sqlQuery = "
             SELECT *
             FROM listing
             ORDER BY idlisting DESC
-            LIMIT 3
+            LIMIT '$num'
         ";
         return $this->query($sqlQuery);
     }
