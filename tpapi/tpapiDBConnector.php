@@ -24,7 +24,7 @@ class tpapiDBConnector{
         $this->_dbPasskey =$_CFG_PASSKEY;
         $this->_dbSchema = $_CFG_SCHEMA;
         */
-        
+
         $this->_connection = new mysqli($this->_dbAddress, $this->_dbUser, $this->_dbPasskey, $this->_dbSchema);
 
         if($this->_connection->connect_errno > 0){
@@ -56,11 +56,13 @@ class tpapiDBConnector{
      */
     public function checkIfUserNameAvailable($username){
         $sqlQuery = "
-            SELECT FROM user
+            SELECT * FROM user
             WHERE username = '$username'
         ";
         $ret = $this->query($sqlQuery);
-        return ($ret === FALSE ? true : false);
+        return (mysqli_num_rows($ret) < 1);
+
+        // return ($ret === FALSE ? true : false);
     }
     /**
      * Inserts a new hashed password for a given iduser into the user table of the database
