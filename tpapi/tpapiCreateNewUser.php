@@ -1,7 +1,7 @@
 <?php
 
 /**
- * TPAPI Trading Post API v0.1-a
+ * TPAPI Trading Post API @version v0.1-a
  *
  * This class creates a new user record in the database using supplied information
  * If a user with the supplied name already exists, it prints that the username is already in use

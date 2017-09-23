@@ -1,7 +1,7 @@
 <?php
 
 /**
- * TPAPI Trading Post API v0.1-a
+ * TPAPI Trading Post API @version v0.1-a
  *
  * This class handles verification that a user is logged in so components that require user information work correctly
  * Basically it checks that cookies are set

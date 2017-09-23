@@ -1,7 +1,7 @@
 <?php
 
 /**
- * TPAPI Trading Post API v0.1-a
+ * TPAPI Trading Post API @version v0.1-a
  *
  * This class handles logging a user in, including
  * - Verifying that the username and password match the records in the database
