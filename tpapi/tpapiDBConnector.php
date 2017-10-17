@@ -7,7 +7,7 @@
  * - Connecting to the database
  * - Executing queries against the database and returning the data
  *
- * Currently, connection information is stored in this file; in future versions it will be stored in a seperate file accessed by this one
+ * Currently, connection information is stored in this file; in future versions it will be stored in a seperate config file accessed by this one
  *
  * @author Tsadow Tom Castle <tsadowcreative@gmail.com>
  */
