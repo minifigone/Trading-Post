@@ -34,7 +34,3 @@ However, this does mean it can not be accessed unless you are within the Pi's Wi
 ..* Client
 ..* Client Passkey
 ..* Schema Name (Database Name)
-
-# Powered By
-![T-Papi API Logo](https://github.com/Tsadow/Trading-Post/blob/master/tpapi/tpapiLogo.png "T-Papi API")
-"Come and get some."
