@@ -1,3 +1,8 @@
+# Development of this project has moved
+This repository now exists to as a record.
+Active development has moved to [this repository.]https://github.com/maximombro/Trading-Post-Mark-2
+This was done because the system is being rebuilt from the ground up with a more solid plan going into it, though we are using roughly the same technologies.
+
 # Trading-Post
 The Trading Post runtime is for creating a functional Ebay/Craigslist like store front on whatever network you want.
 
